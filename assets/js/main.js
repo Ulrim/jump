@@ -236,8 +236,15 @@
         entry.target.classList.add("is-in");
         io.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.05, rootMargin: "0px 0px 5% 0px" });
     items.forEach(function (el) { io.observe(el); });
+
+    // Failsafe: content must never stay hidden, whatever the observer does
+    setTimeout(function () {
+      $$("[data-wipe]").forEach(function (el) {
+        if (!el.closest(".is-in")) el.classList.add("is-in");
+      });
+    }, 1200);
   })();
 
   /* -------------------------------------------------------- number counter */
@@ -250,14 +257,19 @@
       var decimals = (el.getAttribute("data-decimals") | 0);
       if (isNaN(target)) return;
       if (reduceMotion) { el.textContent = target.toLocaleString("ko-KR", { minimumFractionDigits: decimals }); return; }
-      var dur = 1500, t0 = null;
+      // Quantise into visible ticks so the number *counts* rather than blurs
+      var dur = 1250, ticks = 22, t0 = null, shown = null;
       function step(ts) {
         if (!t0) t0 = ts;
         var p = Math.min((ts - t0) / dur, 1);
         var eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = (target * eased).toLocaleString("ko-KR", {
-          minimumFractionDigits: decimals, maximumFractionDigits: decimals
-        });
+        var v = p < 1 ? Math.round(target * eased / (target / ticks)) * (target / ticks) : target;
+        if (v !== shown) {
+          shown = v;
+          el.textContent = v.toLocaleString("ko-KR", {
+            minimumFractionDigits: decimals, maximumFractionDigits: decimals
+          });
+        }
         if (p < 1) requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
@@ -272,6 +284,21 @@
       });
     }, { threshold: 0.5 });
     nums.forEach(function (el) { io.observe(el); });
+  })();
+
+
+  /* ------------------------------------------------- marquee power saving */
+  (function marquee() {
+    var tracks = $$(".marquee__track");
+    if (!tracks.length) return;
+    if (reduceMotion) { tracks.forEach(function (t) { t.style.animation = "none"; }); return; }
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        e.target.style.animationPlayState = e.isIntersecting ? "running" : "paused";
+      });
+    }, { threshold: 0 });
+    tracks.forEach(function (t) { io.observe(t); });
   })();
 
   /* ------------------------------------------------------- local nav state */
