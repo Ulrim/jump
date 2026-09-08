@@ -1,0 +1,346 @@
+<main id="main">
+
+  <section class="page-hero">
+    <svg class="page-hero__bg" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="ph2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0b1f3a"/><stop offset=".6" stop-color="#1b4380"/><stop offset="1" stop-color="#ff6b2c"/></linearGradient></defs>
+      <rect width="1600" height="500" fill="url(#ph2)"/>
+      <g fill="none" stroke="#fff" stroke-width="2" opacity=".25"><circle cx="1300" cy="200" r="240"/><circle cx="1300" cy="200" r="160"/><circle cx="1300" cy="200" r="90"/></g>
+      <path d="M-40 400 C 300 260, 600 520, 940 380 S 1420 200, 1680 340" fill="none" stroke="#c6ff00" stroke-width="6" opacity=".7" stroke-linecap="round"/>
+    </svg>
+    <div class="container page-hero__inner">
+      <nav aria-label="현재 위치">
+        <ol class="breadcrumb"><li><a href="index.html">홈</a></li><li aria-current="page">대회</li></ol>
+      </nav>
+      <p class="eyebrow" style="margin-top:18px">COMPETITION</p>
+      <h1 class="h1">대회</h1>
+      <p class="page-hero__desc">연간 대회 일정부터 종목별 규정, 참가 신청 절차와 역대 기록까지. 대회에 필요한 모든 정보를 모았습니다.</p>
+    </div>
+  </section>
+
+  <nav class="localnav" aria-label="대회 하위 메뉴">
+    <div class="container">
+      <div class="localnav__list">
+        <a href="#schedule" aria-current="true">연간 대회일정</a>
+        <a href="#disciplines">경기 종목</a>
+        <a href="#rules">경기 규정</a>
+        <a href="#apply">참가 신청</a>
+        <a href="#records">기록실</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================== 대회일정 ============================== -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">SCHEDULE</p>
+          <h2 class="h2">2026 연간 대회일정</h2>
+          <p class="lead">일정과 장소는 사정에 따라 변경될 수 있으며, 변경 시 공지사항을 통해 안내합니다.</p>
+        </div>
+        <a class="btn btn--accent" href="#apply">참가 신청하기</a>
+      </div>
+
+      <div class="schedule" data-reveal data-delay="1">
+        <article class="sched">
+          <div class="sched__date"><span class="sched__m">MAR</span><span class="sched__d num">21</span></div>
+          <div>
+            <h3 class="sched__title">2026 전남 줄넘기 시즌 개막전</h3>
+            <p class="sched__meta"><span>무안 전남스포츠센터</span><span>개인전 스피드 전 종목</span><span>초·중·고·일반부</span></p>
+          </div>
+          <span class="chip">종료</span>
+        </article>
+        <article class="sched">
+          <div class="sched__date"><span class="sched__m">MAY</span><span class="sched__d num">23</span></div>
+          <div>
+            <h3 class="sched__title">전남 학교스포츠클럽 줄넘기 리그 (서부권)</h3>
+            <p class="sched__meta"><span>목포 실내체육관</span><span>단체전 중심</span><span>초·중등부</span></p>
+          </div>
+          <span class="chip">종료</span>
+        </article>
+        <article class="sched">
+          <div class="sched__date"><span class="sched__m">SEP</span><span class="sched__d num">12</span></div>
+          <div>
+            <h3 class="sched__title">제13회 대한민국 줄넘기 한마당 전남챔피언십</h3>
+            <p class="sched__meta"><span>순천 팔마실내체육관</span><span>전 종목</span><span>전 부문</span></p>
+          </div>
+          <span class="chip chip--live">접수중</span>
+        </article>
+        <article class="sched">
+          <div class="sched__date"><span class="sched__m">OCT</span><span class="sched__d num">04</span></div>
+          <div>
+            <h3 class="sched__title">전남 학교스포츠클럽 줄넘기 리그 (동부권)</h3>
+            <p class="sched__meta"><span>여수 진남체육관</span><span>단체전 중심</span><span>초·중등부</span></p>
+          </div>
+          <span class="chip chip--accent">접수예정</span>
+        </article>
+        <article class="sched">
+          <div class="sched__date"><span class="sched__m">NOV</span><span class="sched__d num">15</span></div>
+          <div>
+            <h3 class="sched__title">협회장배 생활체육 줄넘기 페스티벌</h3>
+            <p class="sched__meta"><span>나주 종합스포츠파크</span><span>가족부 · 동호인부</span><span>전 연령</span></p>
+          </div>
+          <span class="chip chip--accent">접수예정</span>
+        </article>
+        <article class="sched">
+          <div class="sched__date"><span class="sched__m">DEC</span><span class="sched__d num">06</span></div>
+          <div>
+            <h3 class="sched__title">전남 우수선수 선발전 및 시상식</h3>
+            <p class="sched__meta"><span>순천 팔마실내체육관</span><span>선발전 + 연말 시상</span><span>추천 선수</span></p>
+          </div>
+          <span class="chip">예정</span>
+        </article>
+      </div>
+
+      <div class="grid grid--3" style="margin-top:40px">
+        <div class="callout" data-reveal><b>접수 기간</b><p>대회 개최일 기준 30일 전 접수 시작, 14일 전 마감을 원칙으로 합니다.</p></div>
+        <div class="callout" data-reveal data-delay="1"><b>참가 자격</b><p>협회 등록 클럽·학교 소속 선수 및 지도자. 개인 참가는 대회별 요강을 확인하세요.</p></div>
+        <div class="callout" data-reveal data-delay="2"><b>변경 · 취소</b><p>마감 후 종목 변경은 불가하며, 천재지변 등에 한해 참가비 환불 규정을 적용합니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 종목 ============================== -->
+  <section class="section section--subtle" id="disciplines">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">DISCIPLINES</p>
+          <h2 class="h2">경기 종목 안내</h2>
+          <p class="lead">개인전과 단체전으로 나뉘며, 대회 요강에 따라 일부 종목은 부문별로 운영됩니다.</p>
+        </div>
+      </div>
+
+      <div data-tabs data-reveal data-delay="1">
+        <div class="tabs__nav" role="tablist" aria-label="종목 구분">
+          <button class="tabs__tab" type="button" role="tab" id="ct1" aria-controls="cp1" aria-selected="true">개인전</button>
+          <button class="tabs__tab" type="button" role="tab" id="ct2" aria-controls="cp2" aria-selected="false">단체전</button>
+        </div>
+
+        <div class="tabs__panel" role="tabpanel" id="cp1" aria-labelledby="ct1" style="margin-top:28px">
+          <div class="table-wrap">
+            <table class="table">
+              <caption class="sr-only">개인전 종목 목록</caption>
+              <thead><tr><th scope="col">종목</th><th scope="col">방식</th><th scope="col">시간 · 계수</th><th scope="col">부문</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">30초 번갈아뛰기</th><td>양발을 번갈아 딛으며 연속 도약</td><td>30초 / 오른발 착지 시 1회</td><td>초·중·고·일반</td></tr>
+                <tr><th scope="row">30초 양발모아뛰기</th><td>두 발을 모아 연속 도약</td><td>30초 / 1도약 1회</td><td>초·중·고·일반</td></tr>
+                <tr><th scope="row">30초 이중뛰기</th><td>1회 도약 중 줄이 2회 통과</td><td>30초 / 성공 1회당 1회</td><td>초·중·고·일반</td></tr>
+                <tr><th scope="row">3중뛰기</th><td>1회 도약 중 줄이 3회 통과, 최다 연속 성공</td><td>연속 성공 횟수</td><td>중·고·일반</td></tr>
+                <tr><th scope="row">개인 프리스타일</th><td>음원에 맞춘 자유 연기</td><td>75초 이내 / 난도·구성·표현 채점</td><td>전 부문</td></tr>
+                <tr><th scope="row">왕중왕전</th><td>스피드 상위 입상자 간 결선</td><td>대회 요강에 따름</td><td>전 부문</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tabs__panel" role="tabpanel" id="cp2" aria-labelledby="ct2" style="margin-top:28px" hidden>
+          <div class="table-wrap">
+            <table class="table">
+              <caption class="sr-only">단체전 종목 목록</caption>
+              <thead><tr><th scope="col">종목</th><th scope="col">인원</th><th scope="col">방식 · 계수</th><th scope="col">접수 제한</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">4인 릴레이 스피드</th><td>4명</td><td>주자별 구간 합산 횟수</td><td>클럽당 제한 없음</td></tr>
+                <tr><th scope="row">페어 프리스타일</th><td>2명</td><td>75초 이내 음원, 합동 연기</td><td>클럽당 2팀</td></tr>
+                <tr><th scope="row">팀 프리스타일</th><td>4명 이상</td><td>75초 이내 음원, 대형·교차 구성 평가</td><td>클럽당 2팀</td></tr>
+                <tr><th scope="row">창작 음악줄넘기</th><td>단체</td><td>A~D 4개 파트(각 30초): 번갈아·번갈아·이중·이중</td><td>클럽당 2팀</td></tr>
+                <tr><th scope="row">8자 마라톤</th><td>단체</td><td>긴 줄을 8자로 통과, 제한 시간 내 누적 횟수</td><td>클럽당 2팀</td></tr>
+                <tr><th scope="row">긴줄넘기 (롱로프)</th><td>단체</td><td>동시 도약 연속 성공 횟수</td><td>클럽당 2팀</td></tr>
+                <tr><th scope="row">더블더치</th><td>4~5명</td><td>2개의 긴 줄 교차, 스피드 · 프리스타일</td><td>클럽당 2팀</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout" style="margin-top:22px">
+            <b>단체전 출전 자격</b>
+            <p>단체전 및 창작 음악줄넘기는 <strong>개인전 종목에 출전한 선수</strong>만 신청할 수 있습니다. 프리스타일 출전은 개인전 30초 번갈아뛰기와 30초 이중뛰기 2종목 출전이 전제됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 규정 ============================== -->
+  <section class="section" id="rules">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">RULES</p>
+          <h2 class="h2">경기 규정</h2>
+          <p class="lead">모든 경기는 협회 경기 규정집(2026 개정판)을 기준으로 운영됩니다.</p>
+        </div>
+        <a class="btn btn--ghost" href="news.html#archive">규정집 내려받기</a>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px">
+        <div class="prose" data-reveal>
+          <h3>계수 및 판정</h3>
+          <ul>
+            <li>번갈아뛰기는 <strong>오른발이 줄을 넘을 때 1회</strong>로 계수합니다.</li>
+            <li>이중뛰기는 1회 도약 중 줄이 2회 완전히 통과한 경우에만 인정합니다.</li>
+            <li>줄에 걸린 경우 즉시 재개하며, 걸린 횟수는 계수하지 않습니다.</li>
+            <li>계수는 주심 판정을 원칙으로 하고, 부심 기록과 상이할 경우 심판장이 최종 결정합니다.</li>
+          </ul>
+
+          <h3>출발 및 실격</h3>
+          <ul>
+            <li>출발 신호 전 도약 시 <strong>부정출발</strong>로 간주하여 최종 횟수에서 <strong>3회를 차감</strong>합니다.</li>
+            <li>동일 경기에서 부정출발이 2회 발생하면 해당 시기는 무효 처리됩니다.</li>
+            <li>지정 구역 이탈, 타 선수 방해, 규격 외 용구 사용 시 실격될 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <div class="prose" data-reveal data-delay="1">
+          <h3>용구 규격</h3>
+          <ul>
+            <li>줄의 재질과 길이는 제한하지 않으나, 안전에 위해가 되는 개조는 금지합니다.</li>
+            <li>손잡이에 무게추 등 추가 장치를 부착할 수 없습니다.</li>
+            <li>실내화 착용은 필수이며, 스파이크·부착형 보조기구는 사용할 수 없습니다.</li>
+          </ul>
+
+          <h3>이의 신청</h3>
+          <ul>
+            <li>해당 경기 종료 후 <strong>30분 이내</strong> 서면으로 접수합니다.</li>
+            <li>이의 신청은 팀 대표 지도자 명의로만 가능합니다.</li>
+            <li>심판위원회 심의 결과는 당일 공지되며, 결과에 대한 재심은 없습니다.</li>
+          </ul>
+
+          <h3>안전 관리</h3>
+          <ul>
+            <li>경기 전 준비운동은 지도자 책임 하에 반드시 실시합니다.</li>
+            <li>대회장에는 응급처치 인력과 구급 물품을 상시 배치합니다.</li>
+            <li>참가자는 대회 상해보험 가입을 권장합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 참가신청 ============================== -->
+  <section class="section section--subtle" id="apply">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">HOW TO APPLY</p>
+          <h2 class="h2">참가 신청 안내</h2>
+          <p class="lead">클럽·학교 단위 신청을 원칙으로 하며, 지도자가 대표로 접수합니다.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--4" style="margin-bottom:44px">
+        <article class="card" data-reveal><div class="card__body"><span class="chip chip--navy num">STEP 01</span><h3 class="card__title" style="margin-top:4px">요강 확인</h3><p class="card__desc">자료실에서 대회요강과 참가신청서 양식을 내려받아 종목·부문을 확인합니다.</p></div></article>
+        <article class="card" data-reveal data-delay="1"><div class="card__body"><span class="chip chip--navy num">STEP 02</span><h3 class="card__title" style="margin-top:4px">엔트리 작성</h3><p class="card__desc">개인전·단체전 엔트리를 양식에 맞춰 작성합니다. 단체전은 개인전 출전자 명단이 필요합니다.</p></div></article>
+        <article class="card" data-reveal data-delay="2"><div class="card__body"><span class="chip chip--navy num">STEP 03</span><h3 class="card__title" style="margin-top:4px">접수 · 납부</h3><p class="card__desc">사무국 이메일로 서류를 제출하고 참가비를 납부하면 접수가 완료됩니다.</p></div></article>
+        <article class="card" data-reveal data-delay="3"><div class="card__body"><span class="chip chip--accent num">STEP 04</span><h3 class="card__title" style="margin-top:4px">확정 · 배정</h3><p class="card__desc">마감 후 조 편성과 경기 시간표를 공지하며, 지도자 사전 회의에서 최종 확인합니다.</p></div></article>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px;align-items:start">
+        <div class="card" data-reveal>
+          <div class="card__body" style="padding:30px">
+            <h3 class="card__title" style="font-size:1.25rem">참가 신청 문의</h3>
+            <p class="card__desc" style="margin-top:10px">아래 정보를 남겨주시면 사무국에서 접수 절차를 안내해 드립니다.</p>
+            <form class="form" data-demo-form style="margin-top:22px" novalidate>
+              <div class="field-row">
+                <div class="field">
+                  <label for="ap-club">클럽 · 학교명 <span class="req" aria-hidden="true">*</span></label>
+                  <input id="ap-club" name="club" type="text" required placeholder="예) 순천OO초등학교 줄넘기부">
+                </div>
+                <div class="field">
+                  <label for="ap-name">지도자 성명 <span class="req" aria-hidden="true">*</span></label>
+                  <input id="ap-name" name="name" type="text" required placeholder="예) 홍길동">
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="ap-tel">연락처 <span class="req" aria-hidden="true">*</span></label>
+                  <input id="ap-tel" name="tel" type="tel" required placeholder="010-0000-0000" inputmode="tel">
+                </div>
+                <div class="field">
+                  <label for="ap-event">참가 희망 대회</label>
+                  <select id="ap-event" name="event">
+                    <option>제13회 전남챔피언십 (09.12)</option>
+                    <option>학교스포츠클럽 리그 동부권 (10.04)</option>
+                    <option>협회장배 생활체육 페스티벌 (11.15)</option>
+                    <option>기타 · 미정</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="ap-memo">문의 내용</label>
+                <textarea id="ap-memo" name="memo" placeholder="참가 예정 인원과 종목, 궁금한 점을 적어주세요."></textarea>
+              </div>
+              <label class="check"><input type="checkbox" required> <span>개인정보 수집·이용에 동의합니다. (문의 응대 목적, 1년 보관)</span></label>
+              <p class="field__hint" data-form-note role="status" aria-live="polite"></p>
+              <button class="btn btn--accent btn--block" type="submit">신청 문의 보내기</button>
+            </form>
+          </div>
+        </div>
+
+        <div data-reveal data-delay="1">
+          <div class="table-wrap">
+            <table class="table">
+              <caption class="sr-only">참가비 안내</caption>
+              <thead><tr><th scope="col">구분</th><th scope="col">개인전</th><th scope="col">단체전</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">초등부</th><td class="num">10,000원 / 종목</td><td class="num">30,000원 / 팀</td></tr>
+                <tr><th scope="row">중 · 고등부</th><td class="num">12,000원 / 종목</td><td class="num">40,000원 / 팀</td></tr>
+                <tr><th scope="row">일반 · 동호인부</th><td class="num">15,000원 / 종목</td><td class="num">50,000원 / 팀</td></tr>
+                <tr><th scope="row">가족부</th><td colspan="2" class="num">20,000원 / 팀 (2인 이상)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted" style="font-size:13.5px;margin-top:12px">※ 참가비는 예시 금액이며, 실제 금액은 대회별 요강을 따릅니다.</p>
+
+          <div class="callout" style="margin-top:24px">
+            <b>제출 서류</b>
+            <p>참가신청서 1부, 단체전 엔트리표 1부, 선수 명단(학년·생년월일 포함) 1부.<br>서류는 사무국 이메일 office@jnrope.or.kr 로 제출합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 기록실 ============================== -->
+  <section class="section" id="records">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">RECORDS</p>
+          <h2 class="h2">기록실</h2>
+          <p class="lead">전남챔피언십 개인전 스피드 종목 대회 최고 기록입니다.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" data-reveal data-delay="1">
+        <table class="table">
+          <caption class="sr-only">전남챔피언십 개인전 최고 기록</caption>
+          <thead><tr><th scope="col">종목</th><th scope="col">부문</th><th scope="col">기록</th><th scope="col">소속</th><th scope="col">수립</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">30초 번갈아뛰기</th><td>초등부 남</td><td class="num">104회</td><td>순천 OO초</td><td class="num">2025</td></tr>
+            <tr><th scope="row">30초 번갈아뛰기</th><td>초등부 여</td><td class="num">101회</td><td>여수 OO초</td><td class="num">2025</td></tr>
+            <tr><th scope="row">30초 이중뛰기</th><td>중등부 남</td><td class="num">92회</td><td>목포 OO중</td><td class="num">2024</td></tr>
+            <tr><th scope="row">30초 이중뛰기</th><td>중등부 여</td><td class="num">88회</td><td>광양 OO중</td><td class="num">2025</td></tr>
+            <tr><th scope="row">3중뛰기 (연속)</th><td>고등부</td><td class="num">31회</td><td>순천 OO고</td><td class="num">2023</td></tr>
+            <tr><th scope="row">8자 마라톤</th><td>초등부 단체</td><td class="num">418회 / 3분</td><td>나주 OO초</td><td class="num">2025</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:12px">※ 위 기록은 사이트 구성을 위한 예시 데이터이며, 공식 기록은 대회 결과 공지를 따릅니다.</p>
+
+      <div class="cta-band" data-reveal data-delay="2" style="margin-top:52px">
+        <svg class="cta-band__bg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="cta2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4380"/><stop offset="1" stop-color="#0b1f3a"/></linearGradient></defs>
+          <rect width="1200" height="400" fill="url(#cta2)"/>
+          <g fill="none" stroke="#00c36a" stroke-width="4" opacity=".5" stroke-linecap="round"><path d="M-40 300 q 200 -220 400 0 t 400 0 t 400 0"/></g>
+        </svg>
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="h2">지난 대회 결과가 궁금하신가요?</h2>
+            <p>대회별 종합 순위와 부문별 입상 명단은 공지사항에서 확인할 수 있습니다.</p>
+          </div>
+          <a class="btn btn--accent btn--lg" href="news.html#notice">대회 결과 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

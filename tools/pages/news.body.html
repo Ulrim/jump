@@ -1,0 +1,194 @@
+<main id="main">
+
+  <section class="page-hero">
+    <svg class="page-hero__bg" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="ph5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f3a"/><stop offset="1" stop-color="#1b4380"/></linearGradient></defs>
+      <rect width="1600" height="500" fill="url(#ph5)"/>
+      <g fill="#fff" opacity=".1">
+        <rect x="1020" y="110" width="300" height="20" rx="10"/>
+        <rect x="1020" y="160" width="220" height="20" rx="10"/>
+        <rect x="1020" y="210" width="260" height="20" rx="10"/>
+        <rect x="1020" y="260" width="180" height="20" rx="10"/>
+      </g>
+      <g fill="none" stroke="#00c36a" stroke-width="5" opacity=".6" stroke-linecap="round"><path d="M1380 90 C 1520 200, 1520 300, 1380 410"/></g>
+    </svg>
+    <div class="container page-hero__inner">
+      <nav aria-label="현재 위치">
+        <ol class="breadcrumb"><li><a href="index.html">홈</a></li><li aria-current="page">소식</li></ol>
+      </nav>
+      <p class="eyebrow" style="margin-top:18px">NEWS</p>
+      <h1 class="h1">소식</h1>
+      <p class="page-hero__desc">협회 공지사항과 보도자료, 대회 요강 및 각종 서식을 확인하세요.</p>
+    </div>
+  </section>
+
+  <nav class="localnav" aria-label="소식 하위 메뉴">
+    <div class="container">
+      <div class="localnav__list">
+        <a href="#notice" aria-current="true">공지사항</a>
+        <a href="#press">보도자료</a>
+        <a href="#archive">자료실 · 서식</a>
+        <a href="gallery.html">포토 갤러리</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================== 공지사항 ============================== -->
+  <section class="section" id="notice">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">NOTICE</p>
+          <h2 class="h2">공지사항</h2>
+        </div>
+      </div>
+
+      <form class="searchbar" data-demo-form data-reveal data-delay="1" style="margin-bottom:26px" novalidate>
+        <label class="sr-only" for="nt-cat">분류</label>
+        <select id="nt-cat"><option value="">전체 분류</option><option>대회</option><option>교육</option><option>지부</option><option>일반</option></select>
+        <label class="sr-only" for="nt-key">검색어</label>
+        <input id="nt-key" type="search" placeholder="제목 또는 내용을 검색하세요">
+        <button class="btn" type="submit">검색</button>
+      </form>
+      <p class="field__hint" data-form-note role="status" aria-live="polite" style="margin-bottom:16px"></p>
+
+      <ul class="notice-list" data-reveal data-delay="2">
+        <li><a href="#notice"><span class="chip chip--orange">접수중</span><span class="notice-list__title">제13회 대한민국 줄넘기 한마당 전남챔피언십 참가 신청 안내</span><span class="notice-list__date num">2026.08.28</span></a></li>
+        <li><a href="#notice"><span class="chip chip--accent">교육</span><span class="notice-list__title">2026 하반기 지도자 자격 연수(3급·2급) 일정 및 접수 안내</span><span class="notice-list__date num">2026.08.14</span></a></li>
+        <li><a href="#notice"><span class="chip chip--navy">지부</span><span class="notice-list__title">시·군 지부 등록 클럽 정기 현황 조사 협조 요청</span><span class="notice-list__date num">2026.07.30</span></a></li>
+        <li><a href="#notice"><span class="chip chip--navy">대회</span><span class="notice-list__title">2026년 경기 규정 일부 개정 사항 (스피드·프리스타일 계수 기준)</span><span class="notice-list__date num">2026.07.11</span></a></li>
+        <li><a href="#notice"><span class="chip chip--accent">교육</span><span class="notice-list__title">여름방학 학교스포츠클럽 줄넘기 강사 파견 신청 접수</span><span class="notice-list__date num">2026.06.24</span></a></li>
+        <li><a href="#notice"><span class="chip chip--navy">대회</span><span class="notice-list__title">전남 학교스포츠클럽 줄넘기 리그(서부권) 결과 공지</span><span class="notice-list__date num">2026.05.26</span></a></li>
+        <li><a href="#notice"><span class="chip">일반</span><span class="notice-list__title">2026년도 정기총회 결과 및 사업계획 공고</span><span class="notice-list__date num">2026.03.18</span></a></li>
+        <li><a href="#notice"><span class="chip chip--navy">대회</span><span class="notice-list__title">2026 전남 줄넘기 시즌 개막전 조 편성 및 경기 시간표</span><span class="notice-list__date num">2026.03.10</span></a></li>
+        <li><a href="#notice"><span class="chip chip--accent">교육</span><span class="notice-list__title">심판 자격 보수교육 미이수자 자격 정지 예정 안내</span><span class="notice-list__date num">2026.02.20</span></a></li>
+        <li><a href="#notice"><span class="chip">일반</span><span class="notice-list__title">사무국 이전 및 대표전화 변경 안내</span><span class="notice-list__date num">2026.01.09</span></a></li>
+      </ul>
+
+      <div class="pager" data-reveal data-delay="3">
+        <a href="#notice" aria-label="이전 페이지">‹</a>
+        <span aria-current="page">1</span><a href="#notice">2</a><a href="#notice">3</a><a href="#notice">4</a><a href="#notice">5</a>
+        <a href="#notice" aria-label="다음 페이지">›</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 보도자료 ============================== -->
+  <section class="section section--subtle" id="press">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">PRESS</p>
+          <h2 class="h2">보도자료</h2>
+          <p class="lead">언론에 소개된 전남줄넘기협회의 활동입니다.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1f3a"/><stop offset="1" stop-color="#009a54"/></linearGradient></defs><rect width="480" height="300" fill="url(#p1)"/><g stroke="#c6ff00" stroke-width="5" fill="none" opacity=".8" stroke-linecap="round"><path d="M120 250 C 120 120, 360 120, 360 250"/></g><circle cx="240" cy="110" r="26" fill="#fff" opacity=".9"/></svg>
+            <span class="card__badge chip chip--navy">2026.09.15</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">순천서 전남 최대 줄넘기 축제… 4,000여 명 참가</h3>
+            <p class="card__desc">순천시체육회와 공동 주최한 전남챔피언십이 팔마실내체육관에서 열려 선수와 가족 등 4,000여 명이 함께했습니다.</p>
+            <p class="card__meta"><span>대회</span><span>순천</span></p>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-delay="1">
+          <div class="card__media">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="p2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4380"/><stop offset="1" stop-color="#00c36a"/></linearGradient></defs><rect width="480" height="300" fill="url(#p2)"/><g fill="#fff" opacity=".6"><rect x="90" y="180" width="50" height="80" rx="8"/><rect x="165" y="140" width="50" height="120" rx="8"/><rect x="240" y="165" width="50" height="95" rx="8"/><rect x="315" y="115" width="50" height="145" rx="8"/></g></svg>
+            <span class="card__badge chip chip--navy">2026.06.02</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">"줄넘기로 키우는 기초체력" 전남 학교스포츠클럽 확산</h3>
+            <p class="card__desc">인증제를 도입한 학교에서 학생들의 건강체력 지표가 개선되며 참여 학교가 늘고 있습니다.</p>
+            <p class="card__meta"><span>학교체육</span><span>전남 전역</span></p>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-delay="2">
+          <div class="card__media">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="p3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff6b2c"/><stop offset="1" stop-color="#0b1f3a"/></linearGradient></defs><rect width="480" height="300" fill="url(#p3)"/><g stroke="#fff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M180 150l40 42 100-102"/></g></svg>
+            <span class="card__badge chip chip--navy">2026.05.19</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">전남 지도자 30명, 국제 규격 심판 과정 이수</h3>
+            <p class="card__desc">국제 기준에 맞춘 판정 체계를 도입해 도내 대회 운영의 공정성을 높입니다.</p>
+            <p class="card__meta"><span>교육</span><span>순천</span></p>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="p4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12305a"/><stop offset="1" stop-color="#2a5ba8"/></linearGradient></defs><rect width="480" height="300" fill="url(#p4)"/><g fill="#c6ff00" opacity=".8"><circle cx="150" cy="150" r="16"/><circle cx="230" cy="120" r="16"/><circle cx="310" cy="170" r="16"/></g><path d="M150 150 L230 120 L310 170" stroke="#fff" stroke-width="3" fill="none" opacity=".5"/></svg>
+            <span class="card__badge chip chip--navy">2026.04.08</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">도서지역 학교에 줄넘기 용품 500세트 전달</h3>
+            <p class="card__desc">완도·진도·신안 지역 학교를 중심으로 용품을 지원하고 순회 강습을 진행했습니다.</p>
+            <p class="card__meta"><span>지원사업</span><span>도서지역</span></p>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-delay="1">
+          <div class="card__media">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="p5" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#009a54"/><stop offset="1" stop-color="#0b1f3a"/></linearGradient></defs><rect width="480" height="300" fill="url(#p5)"/><g stroke="#fff" stroke-width="4" fill="none" opacity=".65"><path d="M240 70 l 26 54 60 8 -44 42 11 60 -53 -29 -53 29 11 -60 -44 -42 60 -8z"/></g></svg>
+            <span class="card__badge chip chip--navy">2026.03.22</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">전남 줄넘기 꿈나무, 전국대회 단체전 정상</h3>
+            <p class="card__desc">창작 음악줄넘기 부문에서 전남 대표팀이 종합 우승을 차지했습니다.</p>
+            <p class="card__meta"><span>대회</span><span>전국대회</span></p>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-delay="2">
+          <div class="card__media">
+            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="p6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#060f1f"/><stop offset="1" stop-color="#1b4380"/></linearGradient></defs><rect width="480" height="300" fill="url(#p6)"/><g stroke="#00c36a" stroke-width="4" fill="none" opacity=".8" stroke-linecap="round"><path d="M60 210 q 80 -110 160 0 t 160 0 t 100 0"/></g></svg>
+            <span class="card__badge chip chip--navy">2026.01.28</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">겨울방학 가족 줄넘기 교실 성황리 마무리</h3>
+            <p class="card__desc">부모와 자녀가 함께 참여하는 프로그램에 5개 시·군 200여 가족이 참여했습니다.</p>
+            <p class="card__meta"><span>생활체육</span><span>5개 시·군</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== 자료실 ============================== -->
+  <section class="section" id="archive">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="section-head__text">
+          <p class="eyebrow">ARCHIVE</p>
+          <h2 class="h2">자료실 · 서식</h2>
+          <p class="lead">대회 요강, 규정집, 각종 신청 서식을 내려받을 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap" data-reveal data-delay="1">
+        <table class="table">
+          <caption class="sr-only">자료실 파일 목록</caption>
+          <thead><tr><th scope="col">구분</th><th scope="col">자료명</th><th scope="col">형식</th><th scope="col">등록일</th><th scope="col">받기</th></tr></thead>
+          <tbody>
+            <tr><td>대회</td><th scope="row">2026 전남챔피언십 대회요강 및 참가신청서</th><td>HWP</td><td class="num">2026.08.28</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>규정</td><th scope="row">줄넘기 경기 규정집 (2026 개정판)</th><td>PDF</td><td class="num">2026.07.11</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>대회</td><th scope="row">단체전 엔트리 제출 양식</th><td>XLSX</td><td class="num">2026.07.11</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>교육</td><th scope="row">지도자 연수 교재 목차 및 준비물 안내</th><td>PDF</td><td class="num">2026.06.05</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>지부</td><th scope="row">클럽 신규 등록 신청 서식</th><td>HWP</td><td class="num">2026.03.02</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>학교</td><th scope="row">학교스포츠클럽 강사 파견 신청서</th><td>HWP</td><td class="num">2026.02.14</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>협회</td><th scope="row">전남줄넘기협회 정관</th><td>PDF</td><td class="num">2026.03.14</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+            <tr><td>브랜드</td><th scope="row">CI 사용 가이드라인</th><td>PDF</td><td class="num">2025.11.20</td><td><a class="link-more" href="#archive">내려받기</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:12px">※ 본 페이지는 데모이므로 실제 파일은 연결되어 있지 않습니다.</p>
+    </div>
+  </section>
+
+</main>
