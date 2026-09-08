@@ -320,6 +320,26 @@
     });
   })();
 
+
+  /* --------------------------------------------------------- D-day labels */
+  (function ddays() {
+    var els = $$("[data-deadline]");
+    if (!els.length) return;
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    els.forEach(function (el) {
+      var parts = (el.getAttribute("data-deadline") || "").split("-");
+      if (parts.length !== 3) return;
+      var due = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+      if (isNaN(due.getTime())) return;
+      var diff = Math.round((due - today) / 86400000);
+      var label = diff > 0 ? "D-" + diff : (diff === 0 ? "D-DAY" : "접수마감");
+      var prefix = el.classList.contains("statusbar__dday") ? "마감 " : "";
+      el.textContent = prefix + label;
+      el.setAttribute("title", parts[1] + "월 " + parts[2] + "일 접수 마감");
+      if (diff < 0) el.setAttribute("data-past", "true");
+    });
+  })();
+
   /* ------------------------------------------------------------- footer year */
   (function year() {
     $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
