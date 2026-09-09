@@ -868,6 +868,15 @@ body.is-locked { overflow: hidden; }
   .section-head { align-items: flex-start; }
   .cta-band { border-radius: var(--r-lg); }
 }
+@media (max-width: 420px) {
+  /* The English lockup is wider than the Korean name — drop it before it
+     pushes the header actions off-screen. The Korean name carries identity. */
+  .logo__en { display: none; }
+  .logo { min-width: 0; }
+  .logo__ko { font-size: 15px; }
+  .logo__mark { width: 34px; height: 34px; }
+  .header__actions { gap: 4px; }
+}
 @media (max-width: 400px) {
   .quick__item { padding: 20px 10px 18px; }
   .quick__ico { width: 44px; height: 44px; }
