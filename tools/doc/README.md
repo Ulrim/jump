@@ -18,5 +18,26 @@ python3 -c "import sys;sys.path.insert(0,'tools/doc');import content as C,json;j
 node tools/doc/build_docx.js /tmp/c.json docs/전남한국줄넘기협회_홈페이지_확인요청사항.docx
 ```
 
-hwpx는 OWPML(KS X 6101) 구조를 직접 조립합니다. 한글이 설치된 PC에서
-한 번 열어 확인한 뒤 배포하시기 바랍니다.
+## hwpx 구조 검증
+
+```bash
+python3 tools/doc/verify.py docs/전남한국줄넘기협회_홈페이지_확인요청사항.hwpx
+```
+
+패키지 규약(mimetype 선두·무압축), XML 적합성, 한컴 규약, 참조 무결성을 점검합니다.
+
+### 한컴 규약 중 특히 틀리기 쉬운 것
+
+1차 작성분이 한글에서 열리지 않았고, 원인은 아래였습니다. 수정 시 유지해야 합니다.
+
+| 규칙 | 설명 |
+|---|---|
+| charPr 의 4형제 | `underline`·`strikeout`·`outline`·`shadow` 를 **항상** 출력. 값이 NONE 이어도 생략 불가 |
+| paraPr margin | `<hh:margin><hh:intent value="0"/>…` — `hc:` 네임스페이스나 `unit` 속성을 쓰지 않음 |
+| switch 미사용 | `hh:switch`/`hh:case` 를 쓰지 않고 `margin`·`lineSpacing` 을 직접 둠 |
+| 풀 네임스페이스 | head·sec·package 루트에 14개 네임스페이스를 모두 선언 |
+| linesegarray | 모든 `<hp:p>` 끝에 필요 |
+| secPr 뒤 colPr | `<hp:ctrl><hp:colPr …/></hp:ctrl>` 가 secPr 바로 뒤에 와야 함 |
+| hp:grid | `strtnum` 같은 비표준 속성을 넣으면 안 됨 |
+
+한글이 설치된 PC에서 한 번 열어 확인한 뒤 배포하시기 바랍니다.
