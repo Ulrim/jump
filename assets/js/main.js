@@ -359,11 +359,38 @@
       var due = new Date(+parts[0], +parts[1] - 1, +parts[2]);
       if (isNaN(due.getTime())) return;
       var diff = Math.round((due - today) / 86400000);
-      var label = diff > 0 ? "D-" + diff : (diff === 0 ? "D-DAY" : "접수마감");
-      var prefix = el.classList.contains("statusbar__dday") ? "마감 " : "";
+      var label = diff > 0 ? "D-" + diff
+        : (diff === 0 ? "D-DAY" : (el.getAttribute("data-dday-past") || "접수마감"));
+      var prefix = el.getAttribute("data-dday-prefix");
+      if (prefix === null) prefix = el.classList.contains("statusbar__dday") ? "마감 " : "";
       el.textContent = prefix + label;
       el.setAttribute("title", parts[1] + "월 " + parts[2] + "일 접수 마감");
       if (diff < 0) el.setAttribute("data-past", "true");
+    });
+  })();
+
+  /* -------------------------------------------- 일정 상태 (종료 / 오늘 / 예정)
+     정적 사이트라 빌드 시점의 상태가 그대로 굳는다. 날짜를 들고 다니게 해서
+     페이지를 다시 만들지 않아도 지난 일정이 '예정'으로 남지 않도록 한다. */
+  (function eventState() {
+    var els = $$("[data-event-date]");
+    if (!els.length) return;
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    els.forEach(function (el) {
+      var parts = (el.getAttribute("data-event-date") || "").split("-");
+      if (parts.length !== 3) return;
+      var day = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+      if (isNaN(day.getTime())) return;
+      var diff = Math.round((day - today) / 86400000);
+      var host = el.closest && el.closest(".srow, .sched");
+      if (diff < 0) {
+        el.className = "chip"; el.textContent = "종료";
+        if (host) host.classList.add(host.classList.contains("srow") ? "srow--done" : "is-done");
+      }
+      else if (diff === 0) { el.className = "chip chip--live"; el.textContent = "오늘"; }
+      else if (diff <= 30) { el.className = "chip chip--live"; el.textContent = "D-" + diff; }
+      else { el.className = "chip chip--accent"; el.textContent = "예정"; }
+      el.setAttribute("title", parts[0] + "년 " + (+parts[1]) + "월 " + (+parts[2]) + "일");
     });
   })();
 

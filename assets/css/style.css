@@ -342,7 +342,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
 .gnb { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 24px; }
 
 .logo { display: inline-flex; align-items: center; gap: 12px; flex: none; }
-.logo__mark { width: 46px; height: 46px; flex: none; }
+.logo__mark { width: 42px; height: 46px; object-fit: contain; flex: none; }
 .logo__text { display: flex; flex-direction: column; line-height: 1.15; }
 .logo__ko { font-size: 19px; font-weight: 900; letter-spacing: -.055em; }
 .logo__en { font-size: 10px; font-weight: 700; letter-spacing: .1em; color: var(--text-mute); text-transform: uppercase; }
@@ -606,6 +606,14 @@ body.is-locked { overflow: hidden; }
 .sched__d { display: block; font-size: 30px; font-weight: 900; letter-spacing: -.05em; line-height: 1.1; }
 .sched__title { font-size: 1.02rem; font-weight: 800; letter-spacing: -.035em; }
 .sched__meta { margin-top: 6px; font-size: 13.5px; color: var(--text-mute); display: flex; flex-wrap: wrap; gap: 12px; }
+.sched--major { border-color: var(--green-500); background: var(--bg-elevated); box-shadow: inset 3px 0 0 var(--green-500); }
+
+/* 종목 목록 — 카드 안에서 번호와 종목명을 한 줄씩 */
+.evlist { display: grid; }
+.evlist li { display: flex; align-items: center; gap: 14px; padding: 13px 0; border-top: 1px solid var(--line); }
+.evlist li:first-child { border-top: 0; padding-top: 0; }
+.evlist__no { font-size: 12px; font-weight: 800; letter-spacing: .12em; color: var(--text-mute); }
+.evlist b { font-size: 1.06rem; letter-spacing: -.03em; }
 @media (max-width: 720px) {
   .sched { grid-template-columns: 76px 1fr; row-gap: 12px; }
   .sched > .chip { grid-column: 2; justify-self: start; }
@@ -788,14 +796,12 @@ body.is-locked { overflow: hidden; }
 .footer__legal a { font-size: 13.5px; font-weight: 700; color: rgba(255,255,255,.8); }
 .footer__legal a:hover { color: var(--green-400); }
 .footer__copy { font-size: 13px; color: rgba(255,255,255,.6); }
-.footer__sns { display: flex; gap: 8px; }
-.footer__sns a {
-  width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18);
-  display: grid; place-items: center; color: rgba(255,255,255,.7);
-  transition: background-color .2s, color .2s, border-color .2s, transform .2s var(--ease-out);
+.footer__sns { display: flex; gap: 8px; flex-wrap: wrap; }
+.footer__sns .btn {
+  border-color: rgba(255,255,255,.22); color: rgba(255,255,255,.88);
 }
-.footer__sns a:hover { background: var(--green-500); color: #04220f; border-color: var(--green-500); transform: translateY(-3px); }
-.footer__sns svg { width: 18px; height: 18px; }
+.footer__sns .btn:hover { background: var(--green-500); color: #04220f; border-color: var(--green-500); }
+.footer__sns .btn svg { width: 16px; height: 16px; }
 
 /* Family site select */
 .family { position: relative; }
@@ -858,7 +864,7 @@ body.is-locked { overflow: hidden; }
   html { scroll-padding-top: calc(var(--header-h) + 16px); }
   html:has(.localnav) { scroll-padding-top: calc(var(--header-h) + 72px); }
   .localnav { top: var(--header-h); }
-  .logo__mark { width: 38px; height: 38px; }
+  .logo__mark { width: 35px; height: 38px; }
   .logo__ko { font-size: 16px; }
   .logo__en { font-size: 9px; }
   .hero__controls-inner { height: 62px; gap: 12px; }
@@ -869,12 +875,9 @@ body.is-locked { overflow: hidden; }
   .cta-band { border-radius: var(--r-lg); }
 }
 @media (max-width: 420px) {
-  /* The English lockup is wider than the Korean name — drop it before it
-     pushes the header actions off-screen. The Korean name carries identity. */
-  .logo__en { display: none; }
-  .logo { min-width: 0; }
+  .logo { min-width: 0; gap: 9px; }
   .logo__ko { font-size: 15px; }
-  .logo__mark { width: 34px; height: 34px; }
+  .logo__mark { width: 31px; height: 34px; }
   .header__actions { gap: 4px; }
 }
 @media (max-width: 400px) {

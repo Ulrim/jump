@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jnrope.or.kr/sitemap.xml
+Sitemap: https://ulrim.github.io/jump/sitemap.xml
